@@ -1,0 +1,23 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watchAll --collectCoverage"
+  },
+  "keywords": [],
+  "author": "Flavio Santos",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "eslint": "^9.23.0",
+    "eslint-config": "*",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.3.0",
+    "typescript": "^5.8.2",
+    "typescript-config": "*"
+  }
+}

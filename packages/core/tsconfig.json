@@ -1,0 +1,10 @@
+{    
+    "extends": [
+        "../typescript-config/base.json",
+    ],
+    "include": ["."],
+    "exclude": ["node_modules","dist", "build"],
+    "compilerOptions": {
+        "target": "ES6",
+    },
+}
