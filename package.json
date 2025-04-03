@@ -21,5 +21,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@react-native/typescript-config": "^0.78.2",
+    "eslint": "^9.23.0",
+    "eta": "^3.5.0",
+    "rimraf": "^6.0.1"
+  }
 }
