@@ -1,4 +1,4 @@
-import { Cell } from "../src"
+import { Cell } from ".."
 
 export default class Board {
     private constructor(
