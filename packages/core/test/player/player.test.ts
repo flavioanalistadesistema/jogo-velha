@@ -31,3 +31,22 @@ test('Deve retornar uma nova instância quando adicionar pontos', () => {
     expect(playerWhithScore.type).toBe(PlayerType.X)
     expect(playerWhithScore.score).toBe(10)
 })
+
+test('Deve retornar uma nova instância quando limpar o score', () => {
+    const player = new Player('Lucas', PlayerType.X, 10)
+    const playerWhithScore = player.clearScore()
+    expect(playerWhithScore).not.toBe(player)
+    expect(playerWhithScore.name).toBe('Lucas')
+    expect(playerWhithScore.type).toBe(PlayerType.X)
+    expect(playerWhithScore.score).toBe(0)
+})
+
+test('Deve retornar o mesmo jogador quando não houver alteração', () => {
+    const player = new Player('Lucas', PlayerType.X, 10)
+    const playerWhithScore = player.addScore(0)
+    expect(playerWhithScore).toBe(player)
+    expect(playerWhithScore.name).toBe('Lucas')
+    expect(playerWhithScore.type).toBe(PlayerType.X)
+    expect(playerWhithScore.score).toBe(10)
+})
+
