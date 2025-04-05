@@ -7,6 +7,7 @@ import HorizontalChecker from "./result/HorizontalChecker";
 import VerticalChecker from "./result/VerticalCheker";
 import DiagonalChecker from "./result/DiagonalChecker";
 import TieChecker from "./result/TieChecker";
+import Game from "./game/Game";
 
 
-export {TieChecker, DiagonalChecker, VerticalChecker, HorizontalChecker, GameResult, Board, Cell, PlayerType, Player}
+export {Game, TieChecker, DiagonalChecker, VerticalChecker, HorizontalChecker, GameResult, Board, Cell, PlayerType, Player}
