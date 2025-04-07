@@ -96,3 +96,22 @@ test('Deve retornar o jogador atual depois de uma jogada', () => {
         .addMove(0, 0)
     expect(game.currentPlayer.type).toBe(PlayerType.O);
 })
+
+test('Deve terminar uma jogada com empate', () => {
+    const game = Game.create(new Player('X', PlayerType.X), new Player('O', PlayerType.O))
+        .addMove(0, 0)
+        .addMove(1, 0)
+        .addMove(0, 1)
+        .addMove(1, 1)
+        .addMove(1, 2)
+        .addMove(0, 2)
+        .addMove(2, 0)
+        .addMove(2, 1)
+        .addMove(2, 2)
+        
+    expect(game.result.finished).toBeTruthy();
+    expect(game.result.tied).toBeTruthy();
+    expect(game.player1.score).toBe(0);
+    expect(game.player2.score).toBe(0);
+    expect(game.ties).toBe(1);
+})
